@@ -1,6 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 body {
-  background-color: bisque;
+  background-color: #263238;
   font-family: 'Lato', sans-serif;
+  color: #ffcb05;
+}
+
+header {
+  margin: 0 3em;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row-v-center {
+  align-items: center;
+}
+
+.row-space-between {
+  justify-content: space-between;
+}
+
+nav > ul {
+  list-style: none;
+  margin-left: auto;
+}
+
+nav > ul > li {
+  margin-left: 3em;
+}
+
+a {
+  color: #f7d02c;
+  text-decoration: none;
+}
+
+.headerLogo {
+  width: 45%;
+  height: auto;
 }
