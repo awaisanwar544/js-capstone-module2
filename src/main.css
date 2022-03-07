@@ -36,3 +36,8 @@ a {
   color: #f7d02c;
   text-decoration: none;
 }
+
+.headerLogo {
+  width: 45%;
+  height: auto;
+}
