@@ -12,4 +12,7 @@ module.exports = merge(common, {
     compress: true,
     port: 5001,
   },
+  experiments: {
+    topLevelAwait: true,
+  },
 });
