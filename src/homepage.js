@@ -9,6 +9,7 @@ class homepage {
 
   async getPokemonsById(first, last) {
     this.PokeList = await this.api.getPokemonByRange(first,last);
+    this.drawCards();
   }
 
   drawCards() {
@@ -17,8 +18,8 @@ class homepage {
     let card = '';
     if (this.PokeList.length > 0) {
       this.PokeList.sort((first, second) => {
-        if (first.id < second.id) return 1;
-        if (first.id > second.id) return -1;
+        if (first.id > second.id) return 1;
+        if (first.id < second.id) return -1;
         return 0;
       });
     }
