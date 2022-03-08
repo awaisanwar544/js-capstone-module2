@@ -35,7 +35,7 @@ class homepage {
             </svg>
             <p class="card-text">10 likes</p>
             <div class="row text-right">
-              <a href="#" class="btn btn-primary float-right">Comments</a>
+              <a id="${e.id}" href="#" class="btn btn-primary float-right">Comments</a>
             </div>
           </div>
         </div>
