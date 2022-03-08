@@ -3,7 +3,7 @@
 body {
   background-color: #263238 !important;
   font-family: 'Lato', sans-serif !important;
-  color: #ffcb05 ;
+  color: #ffcb05;
   overflow-x: hidden;
 }
 
@@ -29,9 +29,8 @@ nav > ul {
   margin-left: auto;
 }
 
-
 nav > ul > li {
-  margin-left: 3em ;
+  margin-left: 3em;
 }
 
 a {
