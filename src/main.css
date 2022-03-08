@@ -1,8 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+:root {
+  margin: 0;
+  padding: 0;
+  color: #ffcb05;
+  background-color: #263238;
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+}
 
 body {
   background-color: #263238 !important;
-  font-family: 'Lato', sans-serif !important;
+  font-family: "Lato", sans-serif !important;
   color: #ffcb05;
   overflow-x: hidden;
   display: inline-block;
@@ -56,4 +65,68 @@ a {
 
 .colorback {
   background-color: #263238 !important;
+}
+.comments-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  margin: 0 10vw;
+  width: 80vw;
+  max-height: 80vh;
+  padding-bottom: 2em;
+  overflow-y: scroll;
+  background-color: #b4b9bb80;
+}
+
+#close-icon {
+  position: absolute;
+  right: 1em;
+  margin: 1em 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.comments-modal ul {
+  list-style: none;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-container > img {
+  width: 15em;
+}
+
+.item-container > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-container > ul > li {
+  width: 40%;
+  margin: 1em;
+}
+
+.comments-container > ul {
+  text-align: left;
+}
+
+.comments-container > ul > li > span {
+  font-weight: 800;
+}
+
+.add-comment-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-comment-container > div {
+  display: flex;
+  flex-direction: column;
 }
