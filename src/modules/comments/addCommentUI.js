@@ -10,7 +10,7 @@ const updateComments = (element) => {
   const li = document.createElement('li');
   const today = new Date().toISOString().replace(/T.*/, '').split('-')
     .join('-');
-  li.innerHTML = `${today} <span>${element.username}</span> ${element.comment}`;
+  li.innerHTML = `${today} &emsp; <span>${element.username}:</span> &emsp; ${element.comment}`;
   const heading = document.getElementById('heading');
   heading.innerHTML = `<h2>Comments (${commentsCounter(element.item_id)})</h2>`;
   container.appendChild(li);

@@ -154,9 +154,18 @@ a {
  }
 
  .like-btn {
-  color: black;
+  background: none;
+  color: #ffcb05;
   padding: 0.25em 0.6em;
   font-size: 1.5em;
+  border: 3px solid #ffcb05;
+}
+
+.clicked {
+  background: #ffcb05;
+  border: 3px solid black;
+  color: black;
+
 }
 
 .form__group {
@@ -191,4 +200,13 @@ a {
 /* reset input */
 .form__field:required, .form__field:invalid {
   box-shadow: none;
+}
+
+footer {
+  background-color: #ffcb05;
+  color: #263238;
+  text-align: center;
+  padding: 3em;
+  margin-top: 3em;
+
 }

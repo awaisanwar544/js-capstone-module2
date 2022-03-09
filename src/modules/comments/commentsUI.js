@@ -15,7 +15,7 @@ const commentsUI = (id) => {
         commentsContainer.appendChild(heading);
         data.forEach((element) => {
           const li = document.createElement('li');
-          li.innerHTML = `${element.creation_date} <span>${element.username}</span> ${element.comment}`;
+          li.innerHTML = `${element.creation_date} &emsp; <span>${element.username}:</span> &emsp; ${element.comment}`;
           commentList.appendChild(li);
         });
         commentsContainer.appendChild(commentList);

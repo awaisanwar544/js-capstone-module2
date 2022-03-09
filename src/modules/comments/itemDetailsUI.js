@@ -5,10 +5,10 @@ const itemDetailsUI = (pokemon) => {
   <img src="${pokemon.sprites.other['official-artwork'].front_default}" alt="pokemon image">
   <h2>${pokemon.name}</h2>
   <ul>
-    <li>Weight: ${pokemon.weight} pounds</li>
-    <li>Height: ${pokemon.height} feet</li>
-    <li>Main Ability: ${pokemon.abilities[0].ability.name}</li>
-    <li>Species: ${pokemon.species.name}</li>
+    <li>Weight: &emsp; ${pokemon.weight} pounds</li>
+    <li>Height: &emsp; ${pokemon.height} feet</li>
+    <li>Main Ability: &emsp; ${pokemon.abilities[0].ability.name}</li>
+    <li>Species: &emsp; ${pokemon.species.name}</li>
   </ul>
 `;
   return itemContainer;

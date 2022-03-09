@@ -1,7 +1,10 @@
 import commentsModal from '../comments/commentsModal.js';
+import getLikes from '../likes/getLikes.js';
+import likes from '../likes/likes.js';
 import itemsCounter from './itemsCounter.js';
 
-const homePageUI = (items) => {
+const homePageUI = async (items) => {
+  const likesList = await getLikes().then((data) => data);
   const gallery = document.getElementById('gallery');
   gallery.innerText = `Gallery (${itemsCounter(items)})`;
   const main = document.getElementById('main');
@@ -13,8 +16,9 @@ const homePageUI = (items) => {
     itemContainer.innerHTML = `
       <img src="${pokemon.sprites.other['official-artwork'].front_default}" alt="pokeman image">
       <h2>${pokemon.name}</h2>
-      <p><span class="likes">4</span> &nbsp; Likes &nbsp;<button class="btn like-btn">&#9829;</button></p>
     `;
+    itemContainer.appendChild(likes(pokemon, likesList
+      .filter((item) => item.item_id === pokemon.id.toString())));
     const commentBtn = document.createElement('button');
     commentBtn.classList.add('btn', 'comment-btn');
     commentBtn.id = pokemon.id;
