@@ -19,7 +19,7 @@ const commentsModal = (pokemon) => {
   modalContainer.appendChild(x);
   modalContainer.appendChild(itemDetailsUI(pokemon));
   modalContainer.appendChild(commentsUI(pokemon.id));
-  modalContainer.appendChild(addCommentUI());
+  modalContainer.appendChild(addCommentUI(pokemon.id));
   main.prepend(modalContainer);
   return modalContainer;
 };
