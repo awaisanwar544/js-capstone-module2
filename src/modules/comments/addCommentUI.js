@@ -3,9 +3,9 @@ const addCommentUI = () => {
   addCommentContainer.classList.add('add-comment-container');
   addCommentContainer.innerHTML = `
   <h2>Add a comment</h2>
-  <div>
-    <input type="text" id="username" placeholder="Your name">
-    <textarea name="comment" placeholder="Your comment" id="comment" cols="30" rows="10"></textarea>
+  <div class="form__group field">
+    <input class="form__field" type="text" id="username" placeholder="Your Name">
+    <textarea class="form__field" name="comment" placeholder="Your comment" id="comment" cols="30" rows="10"></textarea>
     <button type="button" class="btn" id="comment-btn"> Comment </button>
   </div>
 `;

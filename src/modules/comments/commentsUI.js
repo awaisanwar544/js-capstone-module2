@@ -1,4 +1,5 @@
 import getComments from './getComments.js';
+import commentsCounter from './commentsCounter.js';
 
 const commentsUI = (id) => {
   const commentsContainer = document.createElement('div');
@@ -6,9 +7,8 @@ const commentsUI = (id) => {
   getComments(id)
     .then(async (data) => {
       if (!data.error) {
-        const commentsCounter = data.length;
         const heading = document.createElement('h2');
-        heading.innerHTML = `<h2>Comments (${commentsCounter})</h2>`;
+        heading.innerHTML = `<h2>Comments (${commentsCounter(data)})</h2>`;
         commentsContainer.appendChild(heading);
         const commentList = document.createElement('ul');
         data.forEach((element) => {

@@ -132,15 +132,11 @@ a {
   overflow: hidden;
 }
 
-.like-btn {
-  color: black;
-}
-
 .btn {
   background: #ffcb05;
   padding: 0.6em 1.3em;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 1em;
   border: 3px solid black;
   border-radius: 0.4em;
   box-shadow: 0.1em 0.1em;
@@ -156,3 +152,43 @@ a {
   transform: translate(0.05em, 0.05em);
   box-shadow: 0.05em 0.05em;
  }
+
+ .like-btn {
+  color: black;
+  padding: 0.25em 0.6em;
+  font-size: 1.5em;
+}
+
+.form__group {
+  padding: 15px 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form__field {
+  margin: 0.6em 0;
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 0.5em;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  border-width: 3px;
+  border-image: linear-gradient(to right, #ffcb05, #38ef7d);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
