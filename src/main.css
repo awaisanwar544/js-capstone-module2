@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
+
 :root {
   margin: 0;
   padding: 0;
@@ -7,6 +8,12 @@
   background-color: #263238;
   font-family: 'Lato', sans-serif;
   line-height: 1.5;
+=======
+body {
+  background-color: #263238 !important;
+  font-family: 'Lato', sans-serif !important;
+  color: #ffcb05;
+  overflow-x: hidden;
 }
 
 header {
@@ -36,8 +43,8 @@ nav > ul > li {
 }
 
 a {
-  color: #f7d02c;
-  text-decoration: none;
+  color: #f7d02c !important;
+  text-decoration: none !important;
 }
 
 .headerLogo {
