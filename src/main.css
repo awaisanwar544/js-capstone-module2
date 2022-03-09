@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
-
 :root {
   margin: 0;
   padding: 0;
@@ -77,7 +76,6 @@ a {
   cursor: pointer;
 }
 
-
 .comments-modal ul {
   list-style: none;
 }
@@ -151,17 +149,17 @@ a {
   cursor: pointer;
  }
  
- .btn:hover {
+.btn:hover {
   transform: translate(-0.05em, -0.05em);
   box-shadow: 0.15em 0.15em;
  }
  
- .btn:active {
+.btn:active {
   transform: translate(0.05em, 0.05em);
   box-shadow: 0.05em 0.05em;
  }
 
- .like-btn {
+.like-btn {
   background: none;
   color: #ffcb05;
   padding: 0.25em 0.6em;
@@ -173,7 +171,6 @@ a {
   background: #ffcb05;
   border: 3px solid black;
   color: black;
-
 }
 
 .form__group {
@@ -205,6 +202,7 @@ a {
   border-image: linear-gradient(to right, #ffcb05, #38ef7d);
   border-image-slice: 1;
 }
+
 /* reset input */
 .form__field:required, .form__field:invalid {
   box-shadow: none;
@@ -216,5 +214,4 @@ footer {
   text-align: center;
   padding: 3em;
   margin-top: 3em;
-
 }
