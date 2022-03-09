@@ -18,9 +18,9 @@ const commentsModal = (pokemon) => {
   x.innerText = 'X';
   modalContainer.appendChild(x);
   modalContainer.appendChild(itemDetailsUI(pokemon));
-  modalContainer.appendChild(commentsUI());
+  modalContainer.appendChild(commentsUI(pokemon.id));
   modalContainer.appendChild(addCommentUI());
-  main.appendChild(modalContainer);
+  main.prepend(modalContainer);
   return modalContainer;
 };
 

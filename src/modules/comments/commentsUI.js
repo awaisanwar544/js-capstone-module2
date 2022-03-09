@@ -1,21 +1,29 @@
 import getComments from './getComments.js';
 
-const comments = getComments('item1');
-
-const commentsUI = () => {
-  const commentsCounter = comments.length;
+const commentsUI = (id) => {
   const commentsContainer = document.createElement('div');
   commentsContainer.classList.add('comments-container');
-  const heading = document.createElement('h2');
-  heading.innerHTML = `<h2>Comments (${commentsCounter})</h2>`;
-  commentsContainer.appendChild(heading);
-  const commentList = document.createElement('ul');
-  comments.forEach((element) => {
-    const li = document.createElement('li');
-    li.innerHTML = `${element.creation_date} <span>${element.username}</span> ${element.comment}`;
-    commentList.appendChild(li);
-  });
-  commentsContainer.appendChild(commentList);
+  getComments(id)
+    .then(async (data) => {
+      if (!data.error) {
+        const commentsCounter = data.length;
+        const heading = document.createElement('h2');
+        heading.innerHTML = `<h2>Comments (${commentsCounter})</h2>`;
+        commentsContainer.appendChild(heading);
+        const commentList = document.createElement('ul');
+        data.forEach((element) => {
+          const li = document.createElement('li');
+          li.innerHTML = `${element.creation_date} <span>${element.username}</span> ${element.comment}`;
+          commentList.appendChild(li);
+        });
+        commentsContainer.appendChild(commentList);
+      } else {
+        const commentsCounter = 0;
+        const heading = document.createElement('h2');
+        heading.innerHTML = `<h2>Comments (${commentsCounter})</h2>`;
+        commentsContainer.appendChild(heading);
+      }
+    });
   return commentsContainer;
 };
 

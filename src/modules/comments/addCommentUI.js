@@ -6,7 +6,7 @@ const addCommentUI = () => {
   <div>
     <input type="text" id="username" placeholder="Your name">
     <textarea name="comment" placeholder="Your comment" id="comment" cols="30" rows="10"></textarea>
-    <input type="button" id="comment-btn" value="Comment">
+    <button type="button" class="btn" id="comment-btn"> Comment </button>
   </div>
 `;
   return addCommentContainer;
