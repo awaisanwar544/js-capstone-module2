@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
+
+:root {
+  margin: 0;
+  padding: 0;
+  color: #ffcb05;
+  background-color: #263238;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+=======
 body {
   background-color: #263238 !important;
   font-family: 'Lato', sans-serif !important;
@@ -43,10 +52,168 @@ a {
   height: auto;
 }
 
-.footer {
+.comments-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   position: fixed;
-  padding: 5px;
-  bottom: 10px;
+  top: 0;
+  width: 100vw;
+  max-height: 100vh;
+  padding-bottom: 2em;
+  overflow-y: scroll;
+  background-color: #263238;
+  z-index: 1000;
+}
+
+#close-icon {
+  position: absolute;
+  right: 1em;
+  margin: 1em 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+
+.comments-modal ul {
+  list-style: none;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-container > img {
+  width: 15em;
+}
+
+.item-container > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-container > ul > li {
+  width: 40%;
+  margin: 1em;
+}
+
+.comments-container > ul {
+  text-align: left;
+}
+
+.comments-container > ul > li > span {
+  font-weight: 800;
+}
+
+.add-comment-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-comment-container > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.item-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.item-div > img {
   width: 100%;
-  height: 40px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.btn {
+  background: #ffcb05;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 1em;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+ }
+ 
+ .btn:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+ }
+ 
+ .btn:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+ }
+
+ .like-btn {
+  background: none;
+  color: #ffcb05;
+  padding: 0.25em 0.6em;
+  font-size: 1.5em;
+  border: 3px solid #ffcb05;
+}
+
+.clicked {
+  background: #ffcb05;
+  border: 3px solid black;
+  color: black;
+
+}
+
+.form__group {
+  padding: 15px 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form__field {
+  margin: 0.6em 0;
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 0.5em;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  border-width: 3px;
+  border-image: linear-gradient(to right, #ffcb05, #38ef7d);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+footer {
+  background-color: #ffcb05;
+  color: #263238;
+  text-align: center;
+  padding: 3em;
+  margin-top: 3em;
+
 }

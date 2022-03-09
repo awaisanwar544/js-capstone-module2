@@ -1,2 +1,9 @@
-import './main.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import homeItems from './modules/homepage/homeItems.js';
+import homePageUI from './modules/homepage/homePageUI.js';
+
+const main = async () => {
+  const pokemonList = await homeItems();
+  homePageUI(pokemonList);
+};
+
+main();
