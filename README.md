@@ -1,6 +1,11 @@
 # Pokemon App
 This is a Pokemon libary that uses an API to fetch the pokemon and also allows for the user to like and comment in each pokemon.
 
+## HomePage
+![image](https://user-images.githubusercontent.com/31547587/157533992-5e587927-0ad5-41cd-b6ab-93540ee60011.png)
+
+## Comment PopUp
+![image](https://user-images.githubusercontent.com/31547587/157534120-7facf611-e307-41c6-bae2-236f25deb815.png)
 
 ## Live demo
 
